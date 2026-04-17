@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(156, 82, 156);
+  color: black;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 
+    rgb(176, 46, 46),
+    inset 0 1px 1px rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+#display {
+  font-size: 42px;
+  margin: 25px 0;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: black;
+  text-shadow: 0 0 10px rgba(0, 255, 200, 0.4);
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  color: white;
+}
+
+#startPauseBtn {
+  background: linear-gradient(135deg, #00c853, #64dd17);
+}
+
+#resetBtn {
+  background: linear-gradient(135deg, #ff1744, #ff5252);
+}
+
+#lapBtn {
+  background: linear-gradient(135deg, #ff9100, #ffea00);
+  color: black;
+}
+
+.buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+#laps {
+  margin-top: 20px;
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+#laps li {
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  background: rgba(255,255,255,0.05);
+  border-left: 3px solid #00c853;
+}

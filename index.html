@@ -1,28 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stopwatch App</title>
-  <link rel="stylesheet" href="style.css" /> 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <h1>⏱ Stopwatch</h1>
+<div class="container">
+  <h1>Quiz Game</h1>
 
-    <div id="display">00:00:00</div>
-
-   <div class="buttons">
-  <button id="startPauseBtn" class="btn start">Start</button>
-  <button id="resetBtn" class="btn reset">Reset</button>
-  <button id="lapBtn" class="btn lap">Lap</button>
-</div>
-
-    <ul id="laps"></ul>
+  <!-- Name Input -->
+  <div id="start-box">
+    <input type="text" id="username" placeholder="Enter your name" />
+    <button onclick="startQuiz()">Start Quiz</button>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Quiz -->
+  <div id="quiz-box" class="hidden">
+    <h2 id="question"></h2>
+    <div id="options"></div>
+    <input type="text" id="fillInput" placeholder="Type your answer here" />
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+
+  <!-- Result -->
+  <div id="result-box" class="hidden">
+    <h2>Your Score: <span id="score"></span></h2>
+    <button onclick="saveScore()">Save Score</button>
+  </div>
+
+  <!-- Leaderboard -->
+  <div id="leaderboard-box" class="hidden">
+    <h2>Leaderboard 🏆</h2>
+    <ul id="leaderboard"></ul>
+    <button onclick="restartQuiz()">Play Again</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
